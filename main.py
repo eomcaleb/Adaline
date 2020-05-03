@@ -2,6 +2,7 @@ import numpy as np
 from adalinelib import Adaline
 
 # Training data set
+# NOTE: bi-polar input is used for ADALINE
 training_inputs = []
 training_inputs.append(np.array([1,1]))
 training_inputs.append(np.array([1,-1]))
@@ -9,7 +10,7 @@ training_inputs.append(np.array([-1,1]))
 training_inputs.append(np.array([-1,-1]))
 
 # AND GATE
-labels = np.array([1,1,1,-1]) 
+labels = np.array([1,-1,-1,-1]) 
 
 # ADALINE
 adaline = Adaline(2)
