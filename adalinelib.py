@@ -10,12 +10,12 @@ class Adaline(object):
 		else:
 			self.weights = np.random.rand(ninput + 1)
 
-	# predict - used for training the model to get the output/sum
+	# linearfunction - used for training the model to get the output/sum
 	def linearfunction(self, inputs):
 		summation = np.dot(inputs, self.weights[1:]) + self.weights[0]
 		return summation	
 
-	# reallifepredict - used after training with real life data set
+	# predict - used after training with real life data set
 	def predict(self, inputs):
 		if (np.dot(inputs, self.weights[1:]) + self.weights[0]) > 0.0:
 			return 1
